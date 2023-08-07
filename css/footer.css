@@ -1,0 +1,106 @@
+footer .top {
+  background-color: #333;
+}
+footer .top > div {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 13px 0;
+}
+footer .top ul {
+  float: left;
+}
+footer .top ul li {
+  position: relative;
+  float: left;
+  padding: 0 19px 0 0;
+}
+/*a 가 아닌 li 에 패딩을 주는 이유는 a 클릭할때 애매모호한 그 영역을 제외하기 위함이며 오른쪽 한쪽에만 주는 이유는 나중에 좌우 값 빼ㄱ기 귀찮아서*/
+/*꾸르팁 textalign 이 가운데이면 패딩을 양옆에 두지만 그게 아니고 왼쪽 정렬이면 오른쪽으로만 둠*/
+footer .top ul li::after {
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 1px;
+  height: 6px;
+  background-color: #fff;
+}
+footer .top ul li:last-child::after {
+  display: none;
+}
+footer .top ul li a {
+  display: block;
+  font-size: 13px;
+  line-height: 42px;
+  color: #fff;
+}
+/*ul 위 아래 패딩값 준 나머지 값에 line-height값을 줘서 정확히 가운데에 오게끔~*/
+footer .top > div > div {
+  float: right;
+}
+footer .top > div > div p {
+  display: inline-block;
+  width: 242px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #fff;
+  font-size: 13px;
+}
+footer .top > div > div strong {
+  font-size: 20px;
+  padding: 0 0 0 15px;
+}
+footer .top > div > div select {
+  padding: 0 0 0 11px;
+  font-size: 12px;
+  width: 200px;
+  height: 44px;
+  border: none;
+  vertical-align: 4px;
+}
+/*select 의 높낮이가 맞지않아서 보드 빼고 버티컬얼라인으로 조절 함 높이도 1px 뺐음 높낮이 조절은 vertical-align middle or px로 조절*/
+footer .btm {
+  padding: 40px 0 44px;
+  background-color: gray;
+}
+footer .btm > div {
+  width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .btm ul {
+  display: inline-block;
+  padding: 32px 0 14px;
+}
+footer .btm li {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+footer .btm li::after {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: #333;
+}
+footer .btm li:nth-of-type(4)::after {
+  display: none;
+}
+footer .btm li a {
+  display: block;
+  color: #3b3b3b;
+  font-size: 14px;
+}
+footer .btm span {
+  display: block;
+  text-align: center;
+}

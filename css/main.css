@@ -1,0 +1,354 @@
+.product {
+  text-align: center;
+  padding: 60px 0 15px;
+  font-size: 0;
+}
+
+.product a {
+  display: block;
+  font-size: 12px;
+  padding: 0 60px;
+  text-align: center;
+}
+
+.product ul {
+  width: 760px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.product ul > li {
+  flex: 4;
+}
+
+.product li a::before {
+  /*position: absolute; top: -76px; left: 50%; transform: translateX(-50%);*/
+  content: "";
+  display: block;
+  width: 65px;
+  height: 70px;
+  background: url(/img/icon/icons.jpg)-66px -110px;
+  margin: 0 0 25px 0;
+}
+
+/*대박 꿀팁 별이 다섯개 바로위에 before가 올경우 굳이 absolute안줘도 되며 높낮이는 margin으로 조절 가운데는 text-align으로함ㅠㅠ*/
+.product li:nth-of-type(2) a::before {
+  background: url(/img/icon/icons.jpg)-187px -110px;
+}
+
+.product li:nth-of-type(3) a::before {
+  background: url(/img/icon/icons.jpg)-308px -110px;
+}
+
+.product li:nth-of-type(4) a::before {
+  background: url(/img/icon/icons.jpg)-430px -110px;
+}
+
+.magazine > div {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.magazine h2 {
+  padding: 50px 0 20px;
+  font-size: 26px;
+  color: #3b3b3b;
+  text-align: center;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.magazine p {
+  font-size: 16px;
+  color: #3b3b3b;
+}
+
+.magazine .slide_box > div {
+  width: 1180px;
+  height: 430px;
+  font-size: 0;
+}
+
+.magazine .slide_box > div .left {
+  float: left;
+  width: 800px;
+  height: 430px;
+  overflow: hidden;
+  position: relative;
+}
+
+.magazine .slide_box > div .left img {
+  height: 100%;
+}
+
+.magazine .slide_box > div .left div {
+  background-color: rgba(0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  padding: 40px 20px 0;
+  box-sizing: border-box;
+}
+
+.magazine .slide_box > div .left div h3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.magazine .slide_box > div .left div h3 span {
+  display: block;
+  font-weight: normal;
+}
+
+.magazine .slide_box > div .left div p {
+  text-align: left;
+  line-height: 24px;
+  padding: 9px 0 0;
+}
+
+.magazine .slide_box > div .left div a {
+  display: block;
+  width: 160px;
+  height: 45px;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-align: center;
+  line-height: 45px;
+  box-sizing: border-box;
+}
+
+.magazine .slide_box > div .right {
+  float: right;
+  font-size: 14px;
+  width: 380px;
+  height: 430px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.magazine .slide_box > div .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 430px;
+}
+
+.magazine .slide_box > div .right li {
+  flex: 4;
+  height: 100%;
+}
+
+.magazine .slide_box > div .right li a {
+  display: table;
+  width: 100%;
+}
+
+.magazine .slide_box > div .right li a div {
+  display: table-cell;
+  padding: 0 0 0 100px;
+  position: relative;
+  height: 80px;
+  vertical-align: middle;
+}
+
+.magazine .slide_box > div .right li a strong {
+  display: block;
+  font-size: 13px;
+}
+
+.magazine .slide_box > div .right li a img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-36%);
+  font-size: 16px;
+  color: #3b3b3b;
+}
+
+.notice {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.notice h2 {
+  padding: 50px 0 20px;
+  font-size: 26px;
+  color: #3b3b3b;
+  text-align: center;
+  line-height: 100%;
+  font-weight: 600;
+}
+/*section안에 사용되는 공간만 따로 만든 section> div를
+          만든 뒤 그 안에 위아래 기본 공간은 padiing으로 설정해 줘야함*/
+.notice > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.notice > ul li {
+  flex: 4;
+}
+.notice ul > li > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 24px;
+  color: #3b3b3b;
+  transition: all 0.3s;
+}
+.notice ul > li > a > h3 {
+  padding: 10px 0 0;
+}
+.notice ul > li > a > span {
+  display: block;
+  padding: 5px;
+  font-weight: 600;
+  color: #3b3b3b;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+/*line-height의 초기화는 값을 100%로 설정해 주는 것이다.*/
+
+.banner {
+  padding: 20px 0;
+}
+.banner > ul {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+}
+.banner > ul li {
+  flex: 1;
+  padding: 0 0 0 20px;
+}
+.banner > ul li:first-child {
+  padding: 0;
+}
+.banner > ul li a {
+  display: block;
+  text-align: center;
+  height: 390px;
+  padding: 303px 0 0;
+  box-sizing: border-box;
+}
+.banner > ul li:nth-of-type(1) a {
+  background: url(/img/bg/tumblr_17b5a284c2c9d0aa03acc2ea250b9a04_c69dc1f9_1280.jpg)
+    no-repeat;
+}
+.banner > ul li:nth-of-type(2) a {
+  background: url(/img/bg/tumblr_17b5a284c2c9d0aa03acc2ea250b9a04_c69dc1f9_1280.jpg)
+    no-repeat;
+}
+.banner > ul li:nth-of-type(3) a {
+  background: url(/img/bg/tumblr_17b5a284c2c9d0aa03acc2ea250b9a04_c69dc1f9_1280.jpg)
+    no-repeat;
+}
+.banner > ul li:nth-of-type(4) a {
+  background: url(/img/bg/tumblr_17b5a284c2c9d0aa03acc2ea250b9a04_c69dc1f9_1280.jpg)
+    no-repeat;
+}
+.banner > ul li a strong {
+  display: block;
+}
+
+.guide_box {
+  width: 1175px;
+  margin: 0 auto;
+  padding: 50px 0 20px;
+}
+.guide_box article {
+  float: left;
+}
+.guide_box .guide h2 {
+  float: left;
+  color: #3b3b3b;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: normal;
+  padding: 0 43px 0 0;
+}
+.guide_box .guide ul {
+  float: left;
+}
+.guide_box .guide ul li {
+  float: left;
+  padding: 0 30px 0 0;
+}
+.guide_box .guide ul li a {
+  display: inline-block;
+  padding: 70px 0 0 0;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+/*부모들이 float즉 inline-block의 속성을 지니기때문에 a또한 동일하게 하여 안에 있는 내용물에따라 위아래 양옆으로 공간이 늘어나게끔 만듬*/
+.guide_box .guide ul li:nth-child(1) a {
+  background: url(/assets/message.svg) no-repeat top center;
+  background-size: 50px;
+}
+.guide_box .guide ul li:nth-child(2) a {
+  background: url(/assets/question.svg) no-repeat top center;
+  background-size: 50px;
+}
+.guide_box .guide ul li:nth-child(3) a {
+  background: url(/assets/person.svg) no-repeat top center;
+  background-size: 50px;
+}
+.guide_box .guide ul li:nth-child(4) a {
+  background: url(/assets/tool.svg) no-repeat top center;
+  background-size: 50px;
+}
+.guide_box .phone {
+  position: relative;
+  padding: 0 0 0 55px;
+}
+.guide_box .phone::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3b3b3b;
+}
+.guide_box .phone h2 {
+  font-size: 15px;
+  color: #3b3b3b;
+  font-weight: normal;
+}
+.guide_box .phone > div {
+  float: left;
+  padding: 0 0 0 55px;
+}
+.guide_box .phone > div:first-child span {
+  font-size: 25px;
+  color: #3b3b3b;
+}
+.guide_box .phone > div:last-child h2,
+.guide_box .phone > div:last-child p {
+  float: left;
+}
+.guide_box .phone > div:last-child p {
+  padding: 0 0 0 25px;
+}
+/*div:last,, first nth는 정말로 유동적이부분 안에 내용이 언제든 바뀔 수 있는부분이며 계속 사용된다면 하지 말아야 함*/
+.guide_box .phone > div:last-child div {
+  clear: both;
+  padding: 15px 0 0;
+}
+/*형제 플롯들사이에 display:block을 지킬수 있는 방법은 해당 태그를 clear:both로 하는것임 */

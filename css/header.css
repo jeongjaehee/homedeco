@@ -1,4 +1,102 @@
-.info-bar__icons img {
-  width: 200px;
-  height: 30px;
+header {
+  text-align: center;
+}
+
+header h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, 50%);
+}
+
+/*패딩값은 태그에*/
+header h1 a {
+  display: block;
+  width: 110px;
+  height: 48px;
+  color: transparent;
+  background: url(/img/btn_home_black.png) no-repeat center center;
+}
+
+/*a태그에는 높이 넓이 로고는 백그라운드로*/
+header .lnb ul {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .lnb li {
+  flex: 2;
+}
+
+header .lnb li a {
+  display: block;
+  height: 81px;
+  font-size: 17px;
+  color: #333;
+  line-height: 81px;
+}
+
+header .lnb li a span {
+  position: relative;
+}
+
+header .lnb li a span::before {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  display: none;
+  content: "";
+  height: 1px;
+  background-color: cadetblue;
+  width: 100%;
+}
+
+header .lnb li a:hover span::before {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: cadetblue;
+  width: 100%;
+}
+
+header .spot {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+}
+header .spot > a {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+header .spot > ul {
+  display: none;
+}
+
+header .spot li a {
+  display: block;
+  height: 81px;
+  padding: 0 10px;
+  line-height: 81px;
+}
+
+header .spot li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 7px;
+  width: 1px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+}
+
+header .spot li:first-child a::before {
+  display: none;
 }
