@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <script src="javascript/jquery-1.12.3.js"></script>
+
   </head>
 
   <body>
@@ -18,15 +20,15 @@
           <!--시각장애인을위해 백그라운드에는 설명을 써줄수 없어 로고이름씀-->
         </a>
       </h1>
-      <h2 class="hide">대메뉴</h2>
+      <h2 class="hide">소메뉴 2종류</h2>
       <!--메뉴 앞에 캡션달기 for시각장애인-->
       <nav class="lnb">
         <ul>
           <li>
-            <a href="#"><span>PRODUCTS</span></a>
+            <a href="#"><span>회사소개</span></a>
           </li>
           <li>
-            <a href="#"><span>ABOUT</span></a>
+            <a href="#"><span>로그인</span></a>
           </li>
         </ul>
         <!--스팬을 넣으므로 글자크기만큼만 활용가능함-->
@@ -34,11 +36,56 @@
       <h2 class="hide">대메뉴</h2>
       <nav class="spot">
         <a href="#" class="menu_bar"><img src="assets/menu.svg" alt="menu-bar"></a>
-        <ul>
-          <li><a href="#">제품찾기</a></li>
-          <li><a href="#">SITEMAP</a></li>
-          <li><a href="#">BLOG</a></li>
+        <div class="navi_wrap">
+        <ul class="navi">
+          <a href="#" class="menu_closebar"><img src="assets/close.svg" alt="menu-bar close"></a>
+          <li><a href="#">제품정보</a>
+            <ul class="submenu">
+              <li><a href="#">벽면재</a></li>
+              <li><a href="#">도어재</a></li>
+              <li><a href="#">몰딩재</a></li>
+              <li><a href="#">시트재</a></li>
+              <li><a href="#">가구재</a></li>
+            </ul>
+          </li>
+          <li><a href="#">시공사례</a>
+            <ul class="submenu">
+              <li><a href="#">테마 갤러리</a></li>
+              <li><a href="#">시공 갤러리</a></li>
+              <li><a href="#">전시장 갤러리</a></li>
+            </ul>
+          </li>
+          <li><a href="#">고객센터</a>
+            <ul class="submenu">
+              <li><a href="#">고객상담</a></li>
+              <li><a href="#">매장 찾기</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">공지</a></li>
+              <li><a href="#">뉴스</a></li>
+              <li><a href="#">자료실</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#">기업소개</a>
+            <ul class="submenu">
+              <li><a href="#">회사개요</a></li>
+              <li><a href="#">투자정보</a></li>
+              <li><a href="#">인사제도</a></li>
+              <li><a href="#">채용공고</a></li>
+              <li><a href="#">네트워크</a></li>
+              <li><a href="#">통합브랜드</a></li>
+            </ul>
+          </li>
+          <li><a href="#">사업분야</a>
+            <ul class="submenu">
+              <li><a href="#">가구 컴포넌트</a></li>
+              <li><a href="#">인테리어 자재</a></li>
+              <li><a href="#">인테리어 플랫폼</a></li>
+              <li><a href="#">연관사</a></li>
+            </ul>
+          </li>
         </ul>
+        </div> 
       </nav>
     </header>
     <main>
@@ -56,17 +103,44 @@
           <h2>홈데코매거진</h2>
           <div class="slide_box">
             <div class="clear">
+                
               <div class="left">
+                <a href="#">
                 <div>
-                  <h3>SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
+                  <h3>111SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
                   <p>
                     SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
                     우수한 친환경 차세대 온돌마루입니다.
                   </p>
-                  <a href="#">자세히보기</a>
+                  <span href="#" class="more">자세히보기</span>
                 </div>
                 <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
                 <img src="http://via.placeholder.com/800x400.jpg" alt="" />
+              </a>
+              <a href="#">
+                <div>
+                  <h3>222SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
+                  <p>
+                    SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
+                    우수한 친환경 차세대 온돌마루입니다.
+                  </p>
+                  <span href="#" class="more">자세히보기</span>
+                </div>
+                <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
+                <img src="http://via.placeholder.com/800x400.jpg" alt="" />
+              </a>
+              <a href="#">
+                <div>
+                  <h3>333SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
+                  <p>
+                    SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
+                    우수한 친환경 차세대 온돌마루입니다.
+                  </p>
+                  <span href="#" class="more">자세히보기</span>
+                </div>
+                <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
+                <img src="http://via.placeholder.com/800x400.jpg" alt="" />
+              </a>
               </div>
               <ul class="right">
                 <li>
@@ -190,6 +264,19 @@
         </div>
       </section>
     </main>
+    <div id="modal"> <!-- 레이어 팝업창 영역 -->
+      <div class="modal_up">
+        <div class="uptitle">신규회원 대상 할인 이벤트 안내</div>
+        <div class="upbody">
+        즐거운 쇼핑 환경을 위해 항상 노력하는 ON쇼핑몰입니다.  
+      고객님들께 한 단계 더 나아가 보답하는 ON쇼핑몰이 되고자
+      신규회원 대상 10% 할인 이벤트를 실시하고 있습니다.
+      웹과 모바일에서 모두 이용 가능하며, 
+        수준 높은 서비스를 위해 앞으로도 꾸준히 노력할 것을 약속드립니다. 
+        </div>
+        <div class="btn">닫기</div>
+      </div>
+    </div> <!-- 레이어 팝업창 영역 끝 -->
     <footer>
       <div class="top">
         <div class="clear">
@@ -231,5 +318,6 @@
         </div>
       </div>
     </footer>
+    <script src="javascript/script.js" defer type="text/javascript"></script>
   </body>
 </html>
