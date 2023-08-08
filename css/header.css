@@ -35,7 +35,7 @@ header .lnb li a {
   display: block;
   height: 81px;
   font-size: 17px;
-  color: #333;
+  color: #3b3b3b;
   line-height: 81px;
 }
 
@@ -50,7 +50,7 @@ header .lnb li a span::before {
   display: none;
   content: "";
   height: 1px;
-  background-color: cadetblue;
+  background-color: #3b3b3b;
   width: 100%;
 }
 
@@ -61,7 +61,7 @@ header .lnb li a:hover span::before {
   display: block;
   content: "";
   height: 1px;
-  background-color: cadetblue;
+  background-color: #3b3b3b;
   width: 100%;
 }
 

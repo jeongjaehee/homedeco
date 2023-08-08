@@ -1,0 +1,73 @@
+/*style.css*/
+#container {
+  width: 1200px;
+  margin: 0 auto;
+}
+#container #snb {
+  float: left;
+  width: 230px;
+  padding: 30px 29px 0 0;
+}
+#container #snb h2 {
+  font-size: 21px;
+  color: #fff;
+  height: 91px;
+  padding: 49px 0 0;
+  background-color: #3b3b3b;
+  font-weight: normal;
+  text-align: center;
+}
+#container #snb h2 span {
+  display: block;
+  color: #3b3b3b;
+  font-size: 12px;
+  padding: 13px 0 0;
+}
+#container #snb li a {
+  border-bottom: 1px solid #3b3b3b;
+  display: block;
+  height: 53px;
+  line-height: 53px;
+  text-indent: 25px;
+  color: #3b3b3b;
+}
+
+#container #contents {
+  float: left;
+  border-left: 1px solid #3b3b3b;
+  width: 880px;
+  padding: 65px 0 79px 60px;
+}
+/*sub.css*/
+#footer {
+  position: static;
+  width: auto;
+  margin: 0;
+  border-top: 1px solid #3b3b3b;
+}
+#footer > div {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+#footer > div > a {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.h2 {
+  font-size: 34px;
+  color: #000;
+}
+.greetings {
+  padding: 76px 0 0;
+  color: #3b3b3b;
+  line-height: 24px;
+}
+.greetings img:first-child {
+  padding: 0 0 42px;
+}
+.greetings p {
+  text-align: right;
+  padding-top: 40px;
+}
