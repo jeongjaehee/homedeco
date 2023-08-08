@@ -54,7 +54,6 @@ body {
 }
 html {
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -183,7 +182,6 @@ input[type="email"][disabled] {
   background: #eaeaea;
   border-color: #c0c0c0;
   color: #666;
-  -webkit-appearance: none;
   font-size: 12px;
 }
 textarea[readonly],
