@@ -198,12 +198,11 @@
 .notice {
   width: 1180px;
   margin: 0 auto;
-  padding: 20px 0;
+  text-align: center;
 }
-.notice h2 {
+.notice > h2 {
   padding: 50px 0 20px;
   font-size: 26px;
-  color: #3b3b3b;
   text-align: center;
   line-height: 100%;
   font-weight: 600;
@@ -239,7 +238,7 @@
   font-weight: 600;
   color: #3b3b3b;
   background-color: gray;
-  padding: 0 60px;
+  padding: 0 50px;
   border-radius: 10px;
   font-size: 14px;
   line-height: 26px;
@@ -298,6 +297,7 @@
 .guide_box article {
   float: left;
 }
+
 .guide_box .guide h2 {
   float: left;
   color: #3b3b3b;
@@ -429,4 +429,105 @@
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+
+.article {
+  width: 1180px;
+  height: 200px;
+  margin: 0 auto;
+}
+.article h2 {
+  padding: 50px 0 20px;
+  font-size: 26px;
+  color: #3b3b3b;
+  text-align: center;
+  line-height: 100%;
+  font-weight: 600;
+}
+.tabmenu {
+  /* 공지사항/갤러리 탭메뉴 영역 */
+  float: left;
+  position: relative;
+  width: 395px;
+  height: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.tabmenu > li {
+  /* 탭 타이틀 영역 스타일 */
+  float: left;
+  width: 100px;
+  line-height: 30px;
+}
+.tabmenu li > a {
+  /* 탭 타이틀 영역 <a> 요소 스타일 */
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  background-color: gray;
+  border-bottom: none;
+}
+.tabmenu li > a:hover {
+  /* <a> 요소에 마우스를 올릴 때 스타일 */
+  background-color: #eeeeee;
+}
+.tabmenu li:first-child a {
+  /* 탭 타이틀 첫 번째 <a> 요소 */
+  border-right: none;
+}
+.tabmenu li.active > a {
+  /* active 클래스가 할당된 <a> 요소 */
+  background-color: #ffffff;
+}
+.tabmenu li.active > a {
+}
+.tabmenu li div {
+  /* 탭 콘텐츠 영역 스타일 */
+  position: absolute;
+  left: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+.tabmenu li.active div {
+  /* active 클래스가 할당된 영역 스타일 */
+  width: 393px;
+  height: 148px;
+  border: 1px solid #dddddd;
+  z-index: 1;
+}
+.tabmenu .anounce li a {
+  text-align: left;
+  padding: 0 10px;
+}
+.tabmenu .anounce li a span {
+  float: right;
+}
+.article > a {
+  display: block;
+  float: right;
+  width: 65%;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+}
+.article > a img {
+  width: 100%;
+}
+.gallery li {
+  /* 갤러리 콘텐츠 영역 스타일 */
+  float: left;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.gallery img {
+  /* 갤러리 콘텐츠 이미지 영역 스타일 */
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+.gallery li:hover {
+  /* 갤러리 콘텐츠에 마우스를 올릴 때 스타일 */
+  opacity: 0.5;
 }

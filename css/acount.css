@@ -1,0 +1,114 @@
+/*sytle.css*/
+.h2 {
+  position: relative;
+  padding: 55px 0 53px;
+  font-size: 36px;
+  color: #222;
+  line-height: 100%;
+  text-align: center;
+}
+.h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background-color: #aaa;
+  transform: translateX(-50%);
+}
+.h2 + p {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  padding: 46px 0 54px;
+}
+.contents {
+  width: 1180px;
+  margin: 0 auto;
+}
+/*sub.css*/
+/*       step*/
+.step {
+  display: flex;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+.step li {
+  flex: 1;
+  position: relative;
+  font-size: 11px;
+  color: #a5a5a5;
+  text-align: center;
+  padding: 22px 0;
+}
+.step li.on {
+  color: #222;
+}
+.step li.on div {
+  color: #00aed8;
+}
+.step li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 12px;
+  height: 19px;
+  transform: translate(-50%, -50%);
+  background: #00006d;
+}
+.step li:last-child::after {
+  display: none;
+}
+.step li div {
+  font-size: 10px;
+  color: #a5a5a5;
+  padding: 8px 0 0;
+}
+.join_box1 {
+  margin: 50px 0 32px;
+  height: 402px;
+  padding: 40px 0 0;
+  background-color: #e4e8f1;
+  box-sizing: border-box;
+  text-align: center;
+}
+.join_box1 h3 {
+  font-size: 24px;
+  color: #eee;
+  padding: 86px 0 0;
+  font-size: 24px;
+  color: #222;
+  line-height: 100%;
+}
+.join_box1 h3:after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #aaa;
+  transform: translateX(-50%);
+}
+.join_box1 p {
+  padding: 37px 0 57px;
+  font-size: 14px;
+  color: #888;
+}
+.join_box1 a {
+  display: inline-block;
+  width: 120px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 13px;
+  background: #042e6f;
+}
+.noti {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="#"
+          >홈데코
+          <!--시각장애인을위해 백그라운드에는 설명을 써줄수 없어 로고이름씀-->
+        </a>
+      </h1>
+      <h2 class="hide">소메뉴 2종류</h2>
+      <!--메뉴 앞에 캡션달기 for시각장애인-->
+      <nav class="lnb">
+        <ul>
+          <li>
+            <a href="#"><span>회사소개</span></a>
+          </li>
+          <li>
+            <a href="#"><span>로그인</span></a>
+          </li>
+        </ul>
+        <!--스팬을 넣으므로 글자크기만큼만 활용가능함-->
+      </nav>
+      <h2 class="hide">대메뉴</h2>
+      <nav class="spot">
+        <a href="#" class="menu_bar"
+          ><img src="assets/menu.svg" alt="menu-bar"
+        /></a>
+        <div class="navi_wrap">
+          <ul class="navi">
+            <a href="#" class="menu_closebar"
+              ><img src="assets/close.svg" alt="menu-bar close"
+            /></a>
+            <li>
+              <a href="#">제품정보</a>
+              <ul class="submenu">
+                <li><a href="#">벽면재</a></li>
+                <li><a href="#">도어재</a></li>
+                <li><a href="#">몰딩재</a></li>
+                <li><a href="#">시트재</a></li>
+                <li><a href="#">가구재</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">시공사례</a>
+              <ul class="submenu">
+                <li><a href="#">테마 갤러리</a></li>
+                <li><a href="#">시공 갤러리</a></li>
+                <li><a href="#">전시장 갤러리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="submenu">
+                <li><a href="#">고객상담</a></li>
+                <li><a href="#">매장 찾기</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">공지</a></li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">자료실</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">기업소개</a>
+              <ul class="submenu">
+                <li><a href="#">회사개요</a></li>
+                <li><a href="#">투자정보</a></li>
+                <li><a href="#">인사제도</a></li>
+                <li><a href="#">채용공고</a></li>
+                <li><a href="#">네트워크</a></li>
+                <li><a href="#">통합브랜드</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">사업분야</a>
+              <ul class="submenu">
+                <li><a href="#">가구 컴포넌트</a></li>
+                <li><a href="#">인테리어 자재</a></li>
+                <li><a href="#">인테리어 플랫폼</a></li>
+                <li><a href="#">연관사</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="container" class="clear">
+      <div id="snb">
+        <h2>회사소개<span>Company Information</span></h2>
+        <ul>
+          <li class="on"><a href="#">CEO인사말</a></li>
+          <li><a href="#">회사개요</a></li>
+          <li><a href="#">조직도</a></li>
+          <li><a href="#">찾아오시는 길</a></li>
+        </ul>
+      </div>
+      <div id="contents">
+        <h2 class="h2">CEO인사말</h2>
+        <div class="greetings">
+          <img
+            src="https://via.placeholder.com/800x367.png"
+            alt="company overview"
+          /><br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing<br />
+          elit. Mollitia, delectus quam pariatur expedita minus perferendis
+          libero dolorem.<br />
+          Facere commodi, consequatur dignissimos, eaque odio debitis accusamus
+          iusto repudiandae veniam <br />voluptate magnam.<br />
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+          Voluptate magni, eligendi, minima repudiandae, quod culpa optio ea,
+          ipsum consequuntur non <br />dignissimos consequatur ex quisquam error
+          velit assumenda molestias earum harum.<br />
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br />
+          Doloremque minima assumenda sapiente repellat, non, at cum earum
+          repudiandae,<br />
+          porro eaque eos neque beatae eveniet. Excepturi commodi praesentium
+          accusantium<br />
+          inventore quae.
+          <p>
+            <img
+              src="https://via.placeholder.com/400x100.gif"
+              alt="대표 성함"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="top">
+        <div class="clear">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">개인정보처리</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사소개</a></li>
+          </ul>
+          <div>
+            <p>고객상담<strong>080-777-7777</strong></p>
+            <select>
+              <option>FAMILY SITE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--안에 내부 박스들을 float으로 감쌀때 clear만 할 div가 또하나 더 필요함 그니깐 전체감싸는 부모.top 가로 전체영역, top을 width 1180px margin 0 auto로 두고 clear영역을 할 2개의 부모가 필요하다는 뜻-->
+      <div class="btm">
+        <div>
+          <p>(주)홈테코</p>
+          <!--글씨는 사라지고 로고배경이미지 들어가게 함-->
+          <ul>
+            <li><a href="#">주)해피콜 | 대표 : 가나다</a></li>
+            <li><a href="#">사업자등록번호 : 607-88-55555</a></li>
+            <li>
+              <a href="#">본사 : 50000, 경상남도 김해시 김해해 무슨로 104-2</a>
+            </li>
+            <li>
+              <a href="#">서울 : 50000, 서울시 강남구 김해해 무슨빌딩 1층</a>
+            </li>
+          </ul>
+          <span>Copyright © 2020 Happycall.LTD All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
