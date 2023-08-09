@@ -198,7 +198,6 @@
 .notice {
   width: 1180px;
   margin: 0 auto;
-  text-align: center;
 }
 .notice > h2 {
   padding: 50px 0 20px;
@@ -209,40 +208,42 @@
 }
 /*section안에 사용되는 공간만 따로 만든 section> div를
           만든 뒤 그 안에 위아래 기본 공간은 padiing으로 설정해 줘야함*/
-.notice > ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
+
+/* 노티스 스크롤이동 */
+#movebox .grey {
+  height: 800px;
+  margin-top: 10px;
 }
-.notice > ul li {
-  flex: 4;
+#movebox .text {
+  float: left;
+  width: 500px;
+  height: 800px;
 }
-.notice ul > li > a {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
+#movebox .text p {
+  padding: 60px 0 0 30px;
+}
+#movebox .image {
+  float: right;
+  width: 600px;
+  position: sticky;
+  top: 100px;
   text-align: center;
-  box-sizing: border-box;
-  font-size: 17px;
-  line-height: 24px;
-  color: #3b3b3b;
-  transition: all 0.3s;
 }
-.notice ul > li > a > h3 {
-  padding: 10px 0 0;
+#movebox .image a {
+  display: block;
+  width: 600px;
+  height: 300px;
 }
-.notice ul > li > a > span {
-  display: inline-block;
-  font-weight: 600;
+#movebox .image a img {
+  width: 100%;
+}
+#movebox .more_btn {
+  border: 1px solid #3b3b3b;
+  background-color: #fff;
   color: #3b3b3b;
-  background-color: gray;
-  padding: 0 50px;
-  border-radius: 10px;
-  font-size: 14px;
-  line-height: 26px;
-  transition: all 0.5s;
+  padding: 10px 20px;
+  margin-top: 10px;
+  z-index: 100;
 }
 
 /*line-height의 초기화는 값을 100%로 설정해 주는 것이다.*/
@@ -376,6 +377,7 @@
   clear: both;
   padding: 15px 0 0;
 }
+
 /*형제 플롯들사이에 display:block을 지킬수 있는 방법은 해당 태그를 clear:both로 하는것임 */
 /* 모달창 시작 */
 #modal {
@@ -392,7 +394,7 @@
 #modal.active {
   display: block;
 }
-.modal_up {
+#modal .modal_up {
   width: 500px;
   height: 400px;
   position: fixed;
@@ -402,20 +404,20 @@
   border-color: #5e1742;
   background-color: #ffffff;
 }
-.uptitle {
+#modal .uptitle {
   margin-top: 30px;
   text-align: center;
   line-height: 16px;
   font-size: 20px;
   font-weight: bold;
 }
-.upbody {
+#modal .upbody {
   padding: 30px;
   text-align: center;
   font-size: 16px;
   line-height: 30px;
 }
-.btn {
+#modal .btn {
   height: 20px;
   width: 80px;
   cursor: pointer;
@@ -465,7 +467,7 @@
   font-size: 16px;
   text-align: center;
   border: 1px solid #dddddd;
-  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.1);
   border-bottom: none;
 }
 .tabmenu li > a:hover {
@@ -503,8 +505,8 @@
 .tabmenu .anounce li a span {
   float: right;
 }
-.article > a {
-  display: block;
+
+.article > .ad {
   float: right;
   width: 65%;
   height: 190px;
@@ -512,8 +514,21 @@
   border-radius: 5px;
   border: 1px solid #dddddd;
 }
-.article > a img {
+.article > .ad ul {
+  height: 100%;
+  width: 500%;
+}
+.article > .ad ul li {
+  float: left;
+  width: 280px;
+}
+.article > .ad ul li a {
+  display: block;
+  overflow: hidden;
+}
+.article > .ad ul li a img {
   width: 100%;
+  background-position: bottom bottom;
 }
 .gallery li {
   /* 갤러리 콘텐츠 영역 스타일 */

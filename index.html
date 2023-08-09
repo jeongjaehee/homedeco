@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
+
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <script src="javascript/jquery-1.12.3.js"></script>
 
+    <script src="javascript/jquery-1.12.3.js"></script>
   </head>
 
   <body>
@@ -20,6 +21,7 @@
           <!--시각장애인을위해 백그라운드에는 설명을 써줄수 없어 로고이름씀-->
         </a>
       </h1>
+
       <h2 class="hide">소메뉴 2종류</h2>
       <!--메뉴 앞에 캡션달기 for시각장애인-->
       <nav class="lnb">
@@ -33,61 +35,76 @@
         </ul>
         <!--스팬을 넣으므로 글자크기만큼만 활용가능함-->
       </nav>
+      <input
+        id="input"
+        placeholder="검색창에 입력하세요."
+        type="text"
+        onchange="myFunction()"
+      />
       <h2 class="hide">대메뉴</h2>
       <nav class="spot">
-        <a href="#" class="menu_bar"><img src="assets/menu.svg" alt="menu-bar"></a>
+        <a href="#" class="menu_bar"
+          ><img src="assets/menu.svg" alt="menu-bar"
+        /></a>
         <div class="navi_wrap">
-        <ul class="navi">
-          <a href="#" class="menu_closebar"><img src="assets/close.svg" alt="menu-bar close"></a>
-          <li><a href="#">제품정보</a>
-            <ul class="submenu">
-              <li><a href="#">벽면재</a></li>
-              <li><a href="#">도어재</a></li>
-              <li><a href="#">몰딩재</a></li>
-              <li><a href="#">시트재</a></li>
-              <li><a href="#">가구재</a></li>
-            </ul>
-          </li>
-          <li><a href="#">시공사례</a>
-            <ul class="submenu">
-              <li><a href="#">테마 갤러리</a></li>
-              <li><a href="#">시공 갤러리</a></li>
-              <li><a href="#">전시장 갤러리</a></li>
-            </ul>
-          </li>
-          <li><a href="#">고객센터</a>
-            <ul class="submenu">
-              <li><a href="#">고객상담</a></li>
-              <li><a href="#">매장 찾기</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">공지</a></li>
-              <li><a href="#">뉴스</a></li>
-              <li><a href="#">자료실</a></li>
-
-            </ul>
-          </li>
-          <li><a href="#">기업소개</a>
-            <ul class="submenu">
-              <li><a href="#">회사개요</a></li>
-              <li><a href="#">투자정보</a></li>
-              <li><a href="#">인사제도</a></li>
-              <li><a href="#">채용공고</a></li>
-              <li><a href="#">네트워크</a></li>
-              <li><a href="#">통합브랜드</a></li>
-            </ul>
-          </li>
-          <li><a href="#">사업분야</a>
-            <ul class="submenu">
-              <li><a href="#">가구 컴포넌트</a></li>
-              <li><a href="#">인테리어 자재</a></li>
-              <li><a href="#">인테리어 플랫폼</a></li>
-              <li><a href="#">연관사</a></li>
-            </ul>
-          </li>
-        </ul>
-        </div> 
+          <ul class="navi">
+            <a href="#" class="menu_closebar"
+              ><img src="assets/close.svg" alt="menu-bar close"
+            /></a>
+            <li>
+              <a href="#">제품정보</a>
+              <ul class="submenu">
+                <li><a href="#">벽면재</a></li>
+                <li><a href="#">도어재</a></li>
+                <li><a href="#">몰딩재</a></li>
+                <li><a href="#">시트재</a></li>
+                <li><a href="#">가구재</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">시공사례</a>
+              <ul class="submenu">
+                <li><a href="#">테마 갤러리</a></li>
+                <li><a href="#">시공 갤러리</a></li>
+                <li><a href="#">전시장 갤러리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="submenu">
+                <li><a href="#">고객상담</a></li>
+                <li><a href="#">매장 찾기</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">공지</a></li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">자료실</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">기업소개</a>
+              <ul class="submenu">
+                <li><a href="#">회사개요</a></li>
+                <li><a href="#">투자정보</a></li>
+                <li><a href="#">인사제도</a></li>
+                <li><a href="#">채용공고</a></li>
+                <li><a href="#">네트워크</a></li>
+                <li><a href="#">통합브랜드</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">사업분야</a>
+              <ul class="submenu">
+                <li><a href="#">가구 컴포넌트</a></li>
+                <li><a href="#">인테리어 자재</a></li>
+                <li><a href="#">인테리어 플랫폼</a></li>
+                <li><a href="#">연관사</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
+
     <main>
       <section class="product">
         <h2 class="hide">제품 종류</h2>
@@ -103,44 +120,49 @@
           <h2>홈데코매거진</h2>
           <div class="slide_box">
             <div class="clear">
-                
               <div class="left">
                 <a href="#">
-                <div>
-                  <h3>111SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
-                  <p>
-                    SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
-                    우수한 친환경 차세대 온돌마루입니다.
-                  </p>
-                  <span href="#" class="more">자세히보기</span>
-                </div>
-                <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
-                <img src="http://via.placeholder.com/800x400.jpg" alt="" />
-              </a>
-              <a href="#">
-                <div>
-                  <h3>222SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
-                  <p>
-                    SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
-                    우수한 친환경 차세대 온돌마루입니다.
-                  </p>
-                  <span href="#" class="more">자세히보기</span>
-                </div>
-                <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
-                <img src="http://via.placeholder.com/800x400.jpg" alt="" />
-              </a>
-              <a href="#">
-                <div>
-                  <h3>333SB Flooring<span>[오리지널,헤링본,강,엠보]</span></h3>
-                  <p>
-                    SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
-                    우수한 친환경 차세대 온돌마루입니다.
-                  </p>
-                  <span href="#" class="more">자세히보기</span>
-                </div>
-                <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
-                <img src="http://via.placeholder.com/800x400.jpg" alt="" />
-              </a>
+                  <div>
+                    <h3>
+                      111SB Flooring<span>[오리지널,헤링본,강,엠보]</span>
+                    </h3>
+                    <p>
+                      SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
+                      우수한 친환경 차세대 온돌마루입니다.
+                    </p>
+                    <span href="#" class="more">자세히보기</span>
+                  </div>
+                  <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
+                  <img src="http://via.placeholder.com/800x400.jpg" alt="" />
+                </a>
+                <a href="#">
+                  <div>
+                    <h3>
+                      222SB Flooring<span>[오리지널,헤링본,강,엠보]</span>
+                    </h3>
+                    <p>
+                      SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
+                      우수한 친환경 차세대 온돌마루입니다.
+                    </p>
+                    <span href="#" class="more">자세히보기</span>
+                  </div>
+                  <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
+                  <img src="http://via.placeholder.com/800x400.jpg" alt="" />
+                </a>
+                <a href="#">
+                  <div>
+                    <h3>
+                      333SB Flooring<span>[오리지널,헤링본,강,엠보]</span>
+                    </h3>
+                    <p>
+                      SB마루는 한국주거문화에 최적화되어 습기에 강하고, 열효율이
+                      우수한 친환경 차세대 온돌마루입니다.
+                    </p>
+                    <span href="#" class="more">자세히보기</span>
+                  </div>
+                  <!--이미지는 관리해야하는거니깐 태그로두고 글들만 백그라운드로 감싸져야해서 div영역나누는태그로 묶어버림-->
+                  <img src="http://via.placeholder.com/800x400.jpg" alt="" />
+                </a>
               </div>
               <ul class="right">
                 <li>
@@ -188,104 +210,148 @@
       </section>
       <section class="article clear">
         <h2>집 꾸밈 사례</h2>
-        <ul class="tabmenu"> <!-- tabmenu:notice와 gallery 묶어줌 -->
-          <li class="active"><a href="#">시공사례</a>
-          <div>
-            <ul class="anounce">
-              <li>
-              <a href="#">
-              제주도 인테리어는 이곳에서...
-              <span>2023.08.01</span>
-              </a>
-              </li>
-              <li>
-              <a href="#">
-              예가 건축자재 전시장...
-              <span>2023.07.01</span>
-              </a>
-              <a href="#">
-                인테리어 신축부터 리모델링까지...
-                <span>2023.06.01</span>
-                </a>
-              </li>
-              <li>
-              <a href="#">
-              명동갔을때 꼭 들려야할 곳...
-              <span>2023.03.01</span>
-              </a>
-              </li>
-              <li>
-              <a href="#">
-              고급스럽고 모던함의 끝판왕...
-              <span>2020.03.01</span>
-              </a>
-              </li>
-            </ul>
-          </div>
+        <ul class="tabmenu">
+          <!-- tabmenu:notice와 gallery 묶어줌 -->
+          <li class="active">
+            <a href="#">시공사례</a>
+            <div>
+              <ul class="anounce">
+                <li>
+                  <a href="#">
+                    제주도 인테리어는 이곳에서...
+                    <span>2023.08.01</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    예가 건축자재 전시장...
+                    <span>2023.07.01</span>
+                  </a>
+                  <a href="#">
+                    인테리어 신축부터 리모델링까지...
+                    <span>2023.06.01</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    명동갔을때 꼭 들려야할 곳...
+                    <span>2023.03.01</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    고급스럽고 모던함의 끝판왕...
+                    <span>2020.03.01</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li><a href="#">갤러리</a>
-          <div class="gallery">
-            <ul>
-              <li>
-              <a href="#"><img src="img/gallery1.jpg" alt="갤러리1"></a>
-              </li>
-              <li>
-              <a href="#"><img src="img/gallery2.jpg" alt="갤러리2"></a>
-              </li>
-              <li>
-              <a href="#"><img src="img/gallery3.jpg" alt="갤러리3"></a>
-              </li>
-            </ul>
-          </div>
+          <li>
+            <a href="#">갤러리</a>
+            <div class="gallery">
+              <ul>
+                <li>
+                  <a href="#"><img src="img/decor1.jpg" alt="갤러리1" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/decor1.jpg" alt="갤러리2" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="img/decor1.jpg" alt="갤러리3" /></a>
+                </li>
+              </ul>
+            </div>
           </li>
-        </ul> 
-        <a href="#" class="ad"><img src="img/designclass--c_LxZzVUnY-unsplash.jpg" alt="작은광고"></a>
+        </ul>
+        <div href="#" class="ad">
+          <ul>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor1.jpg" alt="사례사진1" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor2.jpg" alt="사례사진2" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor3.jpg" alt="사례사진3" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor1.jpg" alt="사례사진1" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor2.jpg" alt="사례사진1" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor3.jpg" alt="사례사진2" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor3.jpg" alt="사례사진3" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor2.jpg" alt="사례사진1" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor1.jpg" alt="사례사진1" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor2.jpg" alt="사례사진2" /></a>
+            </li>
+            <li class="ad_slide">
+              <a href="#"><img src="img/decor3.jpg" alt="사례사진3" /></a>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="notice clear">
-          <!--r가운데정렬용으로 div로 감싸기--->
-          <h2>인기 상품</h2>
-            <ul>
-              <li>
-                <a href="#">
-                  <img src="http://via.placeholder.com/215x215.jpg" alt="" />
-                  <h3>[제품 종류] 제품 이름</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                  <span>자세히 보기 +</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="http://via.placeholder.com/215x215.jpg" alt="" />
-                  <h3>[제품 종류] 제품 이름</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                  <span>자세히 보기 +</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="http://via.placeholder.com/215x215.jpg" alt="" />
-                  <h3>[제품 종류] 제품 이름</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                  <span>자세히 보기 +</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="http://via.placeholder.com/215x215.jpg" alt="" />
-                  <h3>[제품 종류] 제품 이름</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet
-                  </p>
-                  <span>자세히 보기 +</span>
-                </a>
-              </li>
-            </ul>
+        <!--r가운데정렬용으로 div로 감싸기--->
+        <h2>공간의 감각</h2>
+        <div id="movebox">
+          <div class="grey clear">
+            <div class="image">
+              <a href="#">
+                <img
+                  src="img/designclass--c_LxZzVUnY-unsplash.jpg"
+                  alt="공간의 감각 예시"
+                />
+              </a>
+              <button type="button" class="more_btn">자세히보기</button>
+            </div>
+            <div class="text">
+              <p>
+                Meet the first Triple Camera System Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolore ex incidunt laudantium
+                saepe, ipsa suscipit! Accusamus<br />
+                optio asperiores doloribus ipsa dolor obcaecati tempora
+                adipisci<br />
+                laboriosam! Voluptas incidunt quo ipsa vel!
+              </p>
+              <p>
+                Meet the first Triple Camera System Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolore ex incidunt laudantium
+                saepe, ipsa suscipit! Accusamus<br />
+                optio asperiores doloribus ipsa dolor obcaecati tempora
+                adipisci<br />
+                laboriosam! Voluptas incidunt quo ipsa vel!
+              </p>
+              <p>
+                Meet the first Triple Camera System Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolore ex incidunt laudantium
+                saepe, ipsa suscipit! Accusamus<br />
+                optio asperiores doloribus ipsa dolor obcaecati tempora
+                adipisci<br />
+                laboriosam! Voluptas incidunt quo ipsa vel!
+              </p>
+              <p>
+                Meet the first Triple Camera System Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Dolore ex incidunt laudantium
+                saepe, ipsa suscipit! Accusamus<br />
+                optio asperiores doloribus ipsa dolor obcaecati tempora
+                adipisci<br />
+                laboriosam! Voluptas incidunt quo ipsa vel!
+              </p>
+              <p>Meet the first Triple Camera System</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="banner">
@@ -318,19 +384,21 @@
         </div>
       </section>
     </main>
-    <div id="modal"> <!-- 레이어 팝업창 영역 -->
+
+    <div id="modal">
+      <!-- 레이어 팝업창 영역 -->
       <div class="modal_up">
         <div class="uptitle">신규회원 대상 할인 이벤트 안내</div>
         <div class="upbody">
-        즐거운 쇼핑 환경을 위해 항상 노력하는 ON쇼핑몰입니다.  
-      고객님들께 한 단계 더 나아가 보답하는 ON쇼핑몰이 되고자
-      신규회원 대상 10% 할인 이벤트를 실시하고 있습니다.
-      웹과 모바일에서 모두 이용 가능하며, 
-        수준 높은 서비스를 위해 앞으로도 꾸준히 노력할 것을 약속드립니다. 
+          즐거운 쇼핑 환경을 위해 항상 노력하는 ON쇼핑몰입니다. 고객님들께 한
+          단계 더 나아가 보답하는 ON쇼핑몰이 되고자 신규회원 대상 10% 할인
+          이벤트를 실시하고 있습니다. 웹과 모바일에서 모두 이용 가능하며, 수준
+          높은 서비스를 위해 앞으로도 꾸준히 노력할 것을 약속드립니다.
         </div>
-        <div class="btn">닫기</div>
+        <div class="btn" onclick="modalClose()">닫기</div>
       </div>
-    </div> <!-- 레이어 팝업창 영역 끝 -->
+    </div>
+    <!-- 레이어 팝업창 영역 끝 -->
     <footer>
       <div class="top">
         <div class="clear">
@@ -358,14 +426,10 @@
             <li><a href="#">주)해피콜 | 대표 : 가나다</a></li>
             <li><a href="#">사업자등록번호 : 607-88-55555</a></li>
             <li>
-              <a href="#"
-                >본사 : 50000, 경상남도 김해시 김해해 무슨로 104-2</a
-              >
+              <a href="#">본사 : 50000, 경상남도 김해시 김해해 무슨로 104-2</a>
             </li>
             <li>
-              <a href="#"
-                >서울 : 50000, 서울시 강남구 김해해 무슨빌딩 1층</a
-              >
+              <a href="#">서울 : 50000, 서울시 강남구 김해해 무슨빌딩 1층</a>
             </li>
           </ul>
           <span>Copyright © 2020 Happycall.LTD All rights reserved.</span>
