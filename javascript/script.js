@@ -1,15 +1,46 @@
-// JavaScript Document
-
+//모달창 닫기
+function modalClose() {
+  document.getElementById("modal").style.display = "none";
+}
+//검색창 onchane
+function myFunction() {
+  let value = document.getElementById("input").value;
+  console.log(value);
+}
+//왼쪽에서 오른쪽으로 끊임없이 슬라이드
+$(function () {
+  $(".slidelist").hide();
+  $(".slidelist").first().show();
+  setInterval(function () {
+    $(".slidelist:first-child")
+      .fadeOut()
+      .next("li")
+      .fadeIn()
+      .end()
+      .appendTo(".slidelist");
+  }, 3000);
+});
 jQuery(document).ready(function () {
+  //메뉴바 클릭하면 슬라이드다운
   $(".menu_bar").click(function () {
     $(".navi_wrap").stop().slideDown(500);
   });
   $(".menu_closebar").click(function () {
     $(".navi_wrap").stop().slideUp(500);
   });
-  // $(".menu_bar").click(function () {
-  //   $(".navi").slideToggle();
-  // });
+  //시공사례 슬라이드
+  //왼쪽에서 오른쪽으로 끊임없이 애니메이션
+  setInterval(function () {
+    $(".ad ul").delay(2000);
+    $(".ad ul").animate({ marginLeft: -200 });
+    $(".ad ul").delay(2000);
+    $(".ad ul").animate({ marginLeft: -1600 });
+    $(".ad ul").delay(2000);
+    $(".ad ul").animate({ marginLeft: 0 });
+    $(".ad ul").delay(2000);
+  });
+
+  //공지사항 모달창
   $(".left a:gt(0)").hide();
   setInterval(function () {
     $(".left a:first-child")
@@ -26,12 +57,4 @@ jQuery(document).ready(function () {
       return false;
     });
   });
-
-  // $("#modal").addClass("active");
-
-  $(".btn").click(function () {
-    $("#modal").removeClass("active");
-  });
-  //화면 뜨자마자 모달창 띄우기
-  // $("#modal").addClass("active");
 });

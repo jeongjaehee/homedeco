@@ -64,7 +64,14 @@ header .lnb li a:hover span::before {
   background-color: #3b3b3b;
   width: 100%;
 }
-
+#input {
+  position: absolute;
+  right: 160px;
+  top: 28px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #3b3b3b;
+}
 header .spot {
   position: absolute;
   right: 50px;
