@@ -20,6 +20,7 @@ jQuery(document).ready(function () {
   $(".modal_close").click(function () {
     $("#modal").addClass("active");
   });
+
   //메뉴바 클릭하면 슬라이드다운
   $(".menu_bar").click(function () {
     $(".navi_wrap").stop().slideDown(500);
@@ -34,6 +35,7 @@ jQuery(document).ready(function () {
     $(".ad ul").animate({ marginLeft: -200 });
     $(".ad ul").delay(2000);
     $(".ad ul").animate({ marginLeft: -800 });
+
     $(".ad ul").delay(2000);
     $(".ad ul").animate({ marginLeft: 0 });
     $(".ad ul").delay(2000);
@@ -55,6 +57,7 @@ jQuery(document).ready(function () {
       return false;
     });
   });
+
   //로그인창 알람 띄우기
   $("form").on("submit", function (e) {
     if (document.getElementById("exampleInputEmail1").value == "") {
