@@ -39,7 +39,6 @@ jQuery(document).ready(function () {
     $(".ad ul").delay(2000);
   });
 
-  //공지사항 모달창
   $(".left a:gt(0)").hide();
   setInterval(function () {
     $(".left a:first-child")
@@ -55,5 +54,20 @@ jQuery(document).ready(function () {
       $(this).parent().addClass("active").siblings().removeClass("active");
       return false;
     });
+  });
+  //로그인창 알람 띄우기
+  $("form").on("submit", function (e) {
+    if (document.getElementById("exampleInputEmail1").value == "") {
+      e.preventDefault();
+      alert("이메일주소를 입력하세요");
+    } else if (document.getElementById("exampleInputPassword1").value == "") {
+      e.preventDefault();
+      alert("비밀번호를 입력하세요");
+    } else if (
+      document.getElementById("exampleInputPassword1").value.length < 2
+    ) {
+      e.preventDefault();
+      alert("비밀번호는 2자리 이상이어야 합니다.");
+    }
   });
 });

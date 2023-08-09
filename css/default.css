@@ -123,10 +123,7 @@ article,
 figure {
   display: block;
 }
-body {
-  width: 100%;
-  height: 2000px;
-}
+
 /* Form */
 textarea {
   border: 1px solid #dbdbdb;
