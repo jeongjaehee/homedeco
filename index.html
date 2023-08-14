@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <script src="javascript/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
   </head>
 
   <body>
@@ -43,13 +44,11 @@
       <h2 class="hide">대메뉴 햄버거</h2>
       <nav class="spot">
         <a href="#" class="menu_bar"
-          ><img src="assets/menu.svg" alt="menu-bar"
-        /></a>
+          ></a>
         <div class="navi_wrap">
           <ul class="navi">
             <a href="#" class="menu_closebar"
-              ><img src="assets/close.svg" alt="menu-bar close"
-            /></a>
+              ></a>
             <li>
               <a href="#">제품정보</a>
               <ul class="submenu">
@@ -209,64 +208,61 @@
       </section>
       <section class="article clear">
         <h2>집 꾸밈 사례</h2>
-        <ul class="tabmenu">
-          <!-- tabmenu:notice와 gallery 묶어줌 -->
-          <li class="active">
-            <a href="#">시공사례</a>
-            <div>
-              <ul class="anounce">
-                <li>
-                  <a href="#">
-                    제주도 인테리어는 이곳에서...
-                    <span>2023.08.01</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    예가 건축자재 전시장...
-                    <span>2023.07.01</span>
-                  </a>
-                  <a href="#">
-                    인테리어 신축부터 리모델링까지...
-                    <span>2023.06.01</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    명동갔을때 꼭 들려야할 곳...
-                    <span>2023.03.01</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    고급스럽고 모던함의 끝판왕...
-                    <span>2020.03.01</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="#">갤러리</a>
-            <div class="gallery">
-              <ul>
-                <li>
+        <div class="container mt-5">
+          <ul class="list">
+            <li class="tab-button" data-id="0">Products</li>
+            <li class="tab-button orange" data-id="1">Information</li>
+          </ul>
+          <div class="tab-content">
+            <ul class="anounce">
+              <li>
+                <a href="#">
+                  제주도 인테리어는 이곳에서...
+                  <span>2023.08.01</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  예가 건축자재 전시장...
+                  <span>2023.07.01</span>
+                </a>
+                <a href="#">
+                  인테리어 신축부터 리모델링까지...
+                  <span>2023.06.01</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  명동갔을때 꼭 들려야할 곳...
+                  <span>2023.03.01</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  고급스럽고 모던함의 끝판왕...
+                  <span>2020.03.01</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content show">
+            <ul class="gallery">
+              <li>
 
-                  <a href="#"><img src="http://via.placeholder.com/80x80.jpg" alt="갤러리1" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="http://via.placeholder.com/80x80.jpg" alt="갤러리2" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="http://via.placeholder.com/80x80.jpg" alt="갤러리3" /></a>
+                <a href="#"><img src="http://via.placeholder.com/80x80.jpg" alt="갤러리1" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="http://via.placeholder.com/80x80.jpg" alt="갤러리2" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="http://via.placeholder.com/80x80.jpg" alt="갤러리3" /></a>
 
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div href="#" class="ad">
-          <ul>
+              </li>
+          </div>
+          
+        </div> 
+        <div href="#" class="ad swiper mySwiper">
+          <!-- <ul>
             <li class="ad_slide">
               <a href="#"><img src="img/decor1.jpg" alt="사례사진1" /></a>
             </li>
@@ -285,8 +281,14 @@
             <li class="ad_slide">
               <a href="#"><img src="img/decor3.jpg" alt="사례사진2" /></a>
             </li>
-          </ul>
-        </div>
+          </ul> -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="#"><img src="img/decor1.jpg" alt="사례사진1" /></a><a href="#"><img src="img/decor2.jpg" alt="사례사진2" /></a></div>
+              <div class="swiper-slide"><a href="#"><img src="img/decor3.jpg" alt="사례사진3" /></a><a href="#"><img src="img/decor1.jpg" alt="사례사진1" /></a></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
       </section>
       <section class="notice clear">
         <!--r가운데정렬용으로 div로 감싸기--->
@@ -418,7 +420,9 @@
         </div>
       </div>
     </footer>
-
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <script src="javascript/script.js"></script>
 
   </body>

@@ -43,17 +43,6 @@ header .lnb li a span {
   position: relative;
 }
 
-header .lnb li a span::before {
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  display: none;
-  content: "";
-  height: 1px;
-  background-color: #3b3b3b;
-  width: 100%;
-}
-
 header .lnb li a:hover span::before {
   position: absolute;
   bottom: -5px;
@@ -107,6 +96,9 @@ header .spot {
   text-align: center;
   color: #ffffff;
 }
+.navi > li:hover > a {
+  color: orange;
+}
 .navi ul li a {
   line-height: 50px;
   font-size: 20px;
@@ -115,14 +107,13 @@ header .spot {
   color: #ffffff;
 }
 .navi ul li a:hover {
-  background-color: #30a3f3;
-  border-radius: 80%;
-  padding: 0 10px;
+  color: orange;
 }
 header .spot > a {
   display: block;
   width: 40px;
   height: 40px;
+  background: url(/assets/menu.svg) no-repeat center center;
 }
 header .spot .menu_closebar {
   position: absolute;
@@ -131,4 +122,6 @@ header .spot .menu_closebar {
   display: block;
   width: 40px;
   height: 40px;
+  background: url(/assets/close.svg) no-repeat center center;
+  z-index: 1;
 }

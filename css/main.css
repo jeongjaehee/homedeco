@@ -200,6 +200,9 @@
 .notice {
   width: 1180px;
   margin: 0 auto;
+  position: relative;
+  top: -20px;
+  transition: all 0.7s;
 }
 .notice > h2 {
   padding: 50px 0 20px;
@@ -397,7 +400,8 @@
   top: 0px;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1;
-  visibility : visible;
+  display: none;
+  /* visibility : visible; */
   opacity : 1;
   transition : all 1s;
 }
@@ -438,6 +442,9 @@
   width: 1180px;
   height: 200px;
   margin: 0 auto;
+  position: relative;
+  top:-20px;
+  transition: all 0.5s;
 }
 .article h2 {
   padding: 50px 0 20px;
@@ -447,8 +454,8 @@
   line-height: 100%;
   font-weight: 600;
 }
-.tabmenu {
-  /* 공지사항/갤러리 탭메뉴 영역 */
+/* .tabmenu {
+
   float: left;
   position: relative;
   width: 395px;
@@ -457,13 +464,13 @@
   margin-bottom: 10px;
 }
 .tabmenu > li {
-  /* 탭 타이틀 영역 스타일 */
+
   float: left;
   width: 100px;
   line-height: 30px;
 }
 .tabmenu li > a {
-  /* 탭 타이틀 영역 <a> 요소 스타일 */
+
   display: block;
   font-size: 16px;
   text-align: center;
@@ -472,27 +479,24 @@
   border-bottom: none;
 }
 .tabmenu li > a:hover {
-  /* <a> 요소에 마우스를 올릴 때 스타일 */
+
   background-color: #eeeeee;
 }
 .tabmenu li:first-child a {
-  /* 탭 타이틀 첫 번째 <a> 요소 */
+
   border-right: none;
 }
 .tabmenu li.active > a {
-  /* active 클래스가 할당된 <a> 요소 */
   background-color: #ffffff;
 }
 
 .tabmenu li div {
-  /* 탭 콘텐츠 영역 스타일 */
   position: absolute;
   left: 0px;
   height: 0px;
   overflow: hidden;
 }
 .tabmenu li.active div {
-  /* active 클래스가 할당된 영역 스타일 */
   width: 393px;
   height: 148px;
   border: 1px solid #dddddd;
@@ -504,32 +508,104 @@
 }
 .tabmenu .anounce li a span {
   float: right;
-}
+} */
+  .container {
+    position: relative;
+    width: 395px;
+    float: left;
+  }
+  ul.list {
+    width: 395px;
+    height: 205px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  ul.list::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .tab-button {
+    display: block;
+    padding: 10px 20px 10px 20px;
+    float: left;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .orange {
+    border-top: 2px solid orange;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid white;
+    border-left: 1px solid #ccc;
+    color: black;
+    margin-top: -2px;
+  }
+  .tab-content {
+    display: none;
+    padding: 10px;
+  }
+  .tab-content ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    left: 0;
+    width: 395px;
+  }
+  .tab-content ul li {
+    flex: 5;
+    width: 100%;
+  line-height: 30px;
+  }
+  .tab-content ul li a {
+    display: block;
+  }
+  .tab-content ul li a:hover {
+    display: block;
+    background-color: #eeeeee;
+  }
+  .tab-content ul li a span {
+    float: right;
+  }
+  .tab-content ul.gallery {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    left: 0;
+    width: 395px;
+    
 
-.article > .ad {
+  }
+  .show {
+    display: block;
+  }
+.article > .swiper {
   float: right;
-  width: 65%;
+  width: 60%;
   height: 190px;
-  overflow: hidden;
   border-radius: 5px;
   border: 1px solid #dddddd;
 }
-.article > .ad ul {
-  height: 100%;
-  width: 500%;
-}
-.article > .ad ul li {
+
+.article  .swiper-slide a {
+ display: block;
   float: left;
-  width: 280px;
+  width: 50%;
 }
-.article > .ad ul li a {
-  display: block;
-  overflow: hidden;
-}
-.article > .ad ul li a img {
+
+.article  .swiper-slide a img {
   width: 100%;
   background-position: bottom bottom;
-}
+} 
 .gallery li {
   /* 갤러리 콘텐츠 영역 스타일 */
   float: left;
