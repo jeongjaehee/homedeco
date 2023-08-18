@@ -12,56 +12,15 @@
     />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <style>
-      .col-sm-4 {
-        position: relative;
-      }
-      .btn.buy {
-        position: absolute;
-        bottom: 75px;
-        right: 24px;
-        position: absolute;
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: url(/assets/cart.svg) no-repeat center center;
-        background-size: 70%;
-        color: transparent;
-        background-color: #fff;
-        border-radius: 100%;
-      }
-      #cardsection {
-        margin: 20px 0;
-      }
-      .col-sm-4 {
-        margin: 10px 0;
-      }
-      .col-sm-4 h5 {
-        margin: 10px 0;
-      }
-      .productsMenu ul {
-        width: 800px;
-        margin: 40px auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-weight: bolder;
-        font-size: 24px;
-        color: #3b3b3b;
-      }
-      .productsMenu ul li {
-        text-align: center;
-        flex: 5;
-      }
-      .productsMenu ul > li:hover > a {
-        color: gray;
-      }
-    </style>
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <style></style>
   </head>
   <body>
     <header>
       <h1>
-        <a href="#"
+        <a href="index.html"
           >홈데코
           <!--시각장애인을위해 백그라운드에는 설명을 써줄수 없어 로고이름씀-->
         </a>
@@ -72,20 +31,15 @@
       <nav class="lnb">
         <ul>
           <li>
-            <a href="#"><span>About</span></a>
+            <a href="about.html"><span>!About</span></a>
           </li>
           <li>
-            <a href="#"><span>Products</span></a>
+            <a href="products.html"><span>!Products</span></a>
           </li>
         </ul>
         <!--스팬을 넣으므로 글자크기만큼만 활용가능함-->
       </nav>
-      <input
-        id="input"
-        placeholder="입력 후 엔터를 입력하세요"
-        type="text"
-        onchange="myFunction()"
-      />
+      <input id="input" placeholder="입력 후 엔터를 입력하세요" type="text" />
       <h2 class="hide">대메뉴 햄버거</h2>
       <nav class="spot">
         <a href="#" class="menu_bar"></a>
@@ -145,13 +99,14 @@
         </div>
       </nav>
       <div class="loginCart">
-        <a href="#">Login</a>
+        <a href="login.html">!Login</a>
         <a href="#" class="baguni"
-          >Cart<span>0</span>
+          >!Cart<span>0</span>
           <p class="cartcontent"></p
         ></a>
       </div>
     </header>
+
     <section class="products" style="width: 1280px; margin: 20px auto">
       <div class="productsMenu">
         <ul>
@@ -170,86 +125,50 @@
         <button class="btn btn-danger" id="more">더보기</button>
       </div>
     </section>
+    <footer>
+      <div class="top">
+        <div class="clear">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">개인정보처리</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사소개</a></li>
+          </ul>
+          <div>
+            <p>고객상담<strong>080-777-7777</strong></p>
+            <select>
+              <option>FAMILY SITE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--안에 내부 박스들을 float으로 감쌀때 clear만 할 div가 또하나 더 필요함 그니깐 전체감싸는 부모.top 가로 전체영역, top을 width 1180px margin 0 auto로 두고 clear영역을 할 2개의 부모가 필요하다는 뜻-->
+      <div class="btm">
+        <div>
+          <p>(주)홈테코</p>
+          <!--글씨는 사라지고 로고배경이미지 들어가게 함-->
+          <ul>
+            <li><a href="#">주)해피콜 | 대표 : 가나다</a></li>
+            <li><a href="#">사업자등록번호 : 607-88-55555</a></li>
+            <li>
+              <a href="#">본사 : 50000, 경상남도 김해시 김해해 무슨로 104-2</a>
+            </li>
+            <li>
+              <a href="#">서울 : 50000, 서울시 강남구 김해해 무슨빌딩 1층</a>
+            </li>
+          </ul>
+          <span>Copyright © 2020 Happycall.LTD All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
     <script src="javascript/jquery-1.12.3.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-      var products = [
-        { id: 0, price: 70000, title: "Blossom Dress" },
-        { id: 1, price: 50000, title: "Springfield Shirt" },
-        { id: 2, price: 60000, title: "Black Monastery" },
-      ];
-      function templates(name) {
-        name.forEach((a, i) => {
-          var 템플릿 = `<div class="col-sm-4">
-            <img src="https://via.placeholder.com/600" class="w-100">
-            <h5>${name[i].title}</h5>
-            <p>가격 : ${name[i].price}</p>
-            <button class="btn buy">cart</button>
-          </div>
-          `;
-          $(".row").append(템플릿);
-        });
-      }
-      templates(products);
 
-      var click = 0;
-      $("#more").click(function () {
-        click++;
-        if (click == 1) {
-          $.get(
-            "https://raw.githubusercontent.com/jeongjaehee/simpleJson1/main/simple1.json"
-          ).done((a) => {
-            var data = JSON.parse(a);
-            templates(data);
-            buy();
-          });
-        }
-        if (click == 2) {
-          $.get(
-            "https://raw.githubusercontent.com/jeongjaehee/simpleJson2/main/simple2.json"
-          ).done((a) => {
-            var data = JSON.parse(a);
-            templates(data);
-            buy();
-            $("#more").remove();
-          });
-        }
-      });
-      var cart = [];
-      var baguni = 0;
-      function buy() {
-        $(".buy").click(function (e) {
-          var title1 = $(e.target).siblings("h5").text();
-          let proIndex = cart.findIndex((a) => {
-            return title1 == a.title;
-          });
-          if (proIndex == -1) {
-            cart.push({ title: title1, count: 1 });
-          } else {
-            cart[proIndex].count++;
-          }
-          baguni++;
-          console.log(baguni, "baguni");
-          localStorage.setItem("cart", JSON.stringify(cart));
-
-          console.log(cart);
-          $(".baguni > span").text(baguni);
-        });
-      }
-      buy();
-      $(".baguni").hover(
-        function () {
-          $(".cartcontent").text(localStorage.getItem("cart"));
-          $(".cartcontent").show();
-        },
-        function () {
-          $(".cartcontent").hide();
-        }
-      );
-    </script>
+    <script src="javascript/products.js"></script>
   </body>
 </html>

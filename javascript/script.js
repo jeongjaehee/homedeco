@@ -1,8 +1,7 @@
-//검색창 onchane
-function myFunction() {
-  let value = document.getElementById("input").value;
-  console.log(value);
-}
+//검색창 change
+document.getElementById("input").addEventListener("change", function () {
+  console.log("안녕");
+});
 //슬라이드배너 제외 콘텐츠들 스크롤시 키워주기
 // window.addEventListener("scroll", function () {
 //   console.log(window.scrollY);

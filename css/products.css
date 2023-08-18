@@ -1,0 +1,43 @@
+.col-sm-4 {
+  position: relative;
+}
+.btn.buy {
+  position: absolute;
+  bottom: 75px;
+  right: 24px;
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url(/assets/cart.svg) no-repeat center center;
+  background-size: 70%;
+  color: transparent;
+  background-color: #fff;
+  border-radius: 100%;
+}
+#cardsection {
+  margin: 20px 0;
+}
+.col-sm-4 {
+  margin: 10px 0;
+}
+.col-sm-4 h5 {
+  margin: 10px 0;
+}
+.productsMenu ul {
+  width: 800px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 24px;
+  color: #3b3b3b;
+}
+.productsMenu ul li {
+  text-align: center;
+  flex: 5;
+}
+.productsMenu ul > li:hover > a {
+  color: gray;
+}

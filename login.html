@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <script src="javascript/jquery-1.12.3.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
   </head>
   <body>
     <header>
       <h1>
-        <a href="#"
+        <a href="index.html"
           >홈데코
           <!--시각장애인을위해 백그라운드에는 설명을 써줄수 없어 로고이름씀-->
         </a>
@@ -25,30 +23,21 @@
       <nav class="lnb">
         <ul>
           <li>
-            <a href="#"><span>회사소개</span></a>
+            <a href="about.html"><span>!About</span></a>
           </li>
           <li>
-            <a href="#"><span>로그인</span></a>
+            <a href="products.html"><span>!Products</span></a>
           </li>
         </ul>
         <!--스팬을 넣으므로 글자크기만큼만 활용가능함-->
       </nav>
-      <input
-        id="input"
-        placeholder="검색창에 입력하세요."
-        type="text"
-        onchange="myFunction()"
-      />
-      <h2 class="hide">대메뉴</h2>
+      <input id="input" placeholder="입력 후 엔터를 입력하세요" type="text" />
+      <h2 class="hide">대메뉴 햄버거</h2>
       <nav class="spot">
-        <a href="#" class="menu_bar"
-          ><img src="assets/menu.svg" alt="menu-bar"
-        /></a>
+        <a href="#" class="menu_bar"></a>
         <div class="navi_wrap">
           <ul class="navi">
-            <a href="#" class="menu_closebar"
-              ><img src="assets/close.svg" alt="menu-bar close"
-            /></a>
+            <a href="#" class="menu_closebar"></a>
             <li>
               <a href="#">제품정보</a>
               <ul class="submenu">
@@ -101,6 +90,13 @@
           </ul>
         </div>
       </nav>
+      <div class="loginCart">
+        <a href="login.html">!Login</a>
+        <a href="#" class="baguni"
+          >Cart<span></span>
+          <p class="cartcontent"></p
+        ></a>
+      </div>
     </header>
     <form>
       <div class="mb-3">
@@ -127,17 +123,47 @@
         <input type="checkbox" class="form-check-input" id="exampleCheck1" />
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <a href="accout.html" class="account">회원가입</a>
+      <button type="submit" class="btn btn-primary">!Submit</button>
+      <a href="accout.html" class="account" target="_blank">!회원가입</a>
     </form>
-    <div class="card">
-      <label for="userInput">닉네임 입력하세요</label>
-      <input type="text" id="userInput" />
-      <label for="contentInput">댓글 내용입력하세요</label>
-      <input type="text" id="contentInput" />
-      <button id="submitButton">출력</button>
-    </div>
-    <div id="output"></div>
+    <footer>
+      <div class="top">
+        <div class="clear">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">개인정보처리</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">회사소개</a></li>
+          </ul>
+          <div>
+            <p>고객상담<strong>080-777-7777</strong></p>
+            <select>
+              <option>FAMILY SITE</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--안에 내부 박스들을 float으로 감쌀때 clear만 할 div가 또하나 더 필요함 그니깐 전체감싸는 부모.top 가로 전체영역, top을 width 1180px margin 0 auto로 두고 clear영역을 할 2개의 부모가 필요하다는 뜻-->
+      <div class="btm">
+        <div>
+          <p>(주)홈테코</p>
+          <!--글씨는 사라지고 로고배경이미지 들어가게 함-->
+          <ul>
+            <li><a href="#">주)해피콜 | 대표 : 가나다</a></li>
+            <li><a href="#">사업자등록번호 : 607-88-55555</a></li>
+            <li>
+              <a href="#">본사 : 50000, 경상남도 김해시 김해해 무슨로 104-2</a>
+            </li>
+            <li>
+              <a href="#">서울 : 50000, 서울시 강남구 김해해 무슨빌딩 1층</a>
+            </li>
+          </ul>
+          <span>Copyright © 2020 Happycall.LTD All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="javascript/jquery-1.12.3.js"></script>
 
     <script src="javascript/login.js"></script>
   </body>

@@ -6,7 +6,7 @@ header h1 {
   position: absolute;
   top: 0;
   left: 50%;
-
+  z-index: 10;
   transform: translate(-50%, 50%);
 }
 
@@ -81,6 +81,7 @@ header .spot {
   z-index: 1;
   box-sizing: border-box;
   display: none;
+  z-index: 100;
 }
 .navi {
   display: flex;
@@ -95,7 +96,6 @@ header .spot {
   /* 각 메인 메뉴의 <a> 요소 스타일 */
   line-height: 40px;
   font-size: 30px;
-  font-weight: bold;
   text-align: center;
   color: #ffffff;
 }
@@ -105,7 +105,6 @@ header .spot {
 .navi ul li a {
   line-height: 50px;
   font-size: 20px;
-  font-weight: normal;
   text-align: center;
   color: #ffffff;
 }
