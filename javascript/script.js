@@ -53,17 +53,7 @@ jQuery(document).ready(function () {
   }
 
   //시공사례 슬라이드
-  //왼쪽에서 오른쪽으로 끊임없이 애니메이션
-  // setInterval(function () {
-  //   $(".ad ul").delay(2000);
-  //   $(".ad ul").animate({ marginLeft: -200 });
-  //   $(".ad ul").delay(2000);
-  //   $(".ad ul").animate({ marginLeft: -800 });
 
-  //   $(".ad ul").delay(2000);
-  //   $(".ad ul").animate({ marginLeft: 0 });
-  //   $(".ad ul").delay(2000);
-  // });
   var swiper = new Swiper(".mySwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
@@ -80,20 +70,4 @@ jQuery(document).ready(function () {
       .end()
       .appendTo(".left");
   }, 3000);
-
-  //로그인창 알람 띄우기
-  $("form").on("submit", function (e) {
-    if (document.getElementById("exampleInputEmail1").value == "") {
-      e.preventDefault();
-      alert("이메일주소를 입력하세요");
-    } else if (document.getElementById("exampleInputPassword1").value == "") {
-      e.preventDefault();
-      alert("비밀번호를 입력하세요");
-    } else if (
-      document.getElementById("exampleInputPassword1").value.length < 2
-    ) {
-      e.preventDefault();
-      alert("비밀번호는 2자리 이상이어야 합니다.");
-    }
-  });
 });

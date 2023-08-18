@@ -19,9 +19,12 @@ header h1 a {
   background: url(/img/btn_home_black.png) no-repeat center center;
 }
 
-/*a태그에는 높이 넓이 로고는 백그라운드로*/
+header .lnb {
+  position: relative;
+  left: 100px;
+}
 header .lnb ul {
-  width: 200px;
+  width: 210px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,7 +58,7 @@ header .lnb li a:hover span::before {
 }
 #input {
   position: absolute;
-  right: 160px;
+  right: 260px;
   top: 28px;
   width: 200px;
   height: 30px;
@@ -63,7 +66,7 @@ header .lnb li a:hover span::before {
 }
 header .spot {
   position: absolute;
-  right: 50px;
+  left: 50px;
   top: 20px;
   display: flex;
 }
@@ -117,11 +120,58 @@ header .spot > a {
 }
 header .spot .menu_closebar {
   position: absolute;
-  right: 50px;
+  left: 50px;
   top: 20px;
   display: block;
   width: 40px;
   height: 40px;
   background: url(/assets/close.svg) no-repeat center center;
   z-index: 1;
+}
+header .loginCart {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  height: 24px;
+  right: 70px;
+  top: 28px;
+  height: 17px;
+
+  display: inline-block;
+  box-sizing: border-box;
+}
+header .loginCart a {
+  flex: 2;
+  margin: 0 20px;
+  padding-bottom: 5px;
+  font-size: 17px;
+  color: #3b3b3b;
+}
+header .loginCart a.baguni::after {
+  position: absolute;
+  right: -24px;
+  top: -2px;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url(/assets/cart.svg) no-repeat center center;
+}
+header .loginCart a.baguni span {
+  position: absolute;
+  right: -24px;
+  top: 5px;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  color: orangered;
+  font-weight: bolder;
+}
+header .loginCart a:hover {
+  border-bottom: 1px solid #3b3b3b;
+  left: 0;
+  height: 1px;
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
   </head>
   <body>
     <header>
@@ -106,7 +107,7 @@
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input
           type="email"
-          class="form-control"
+          class="form-control login"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="이메일주소를 입력하지 말아보세요"
@@ -116,7 +117,7 @@
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input
           type="password"
-          class="form-control"
+          class="form-control login"
           id="exampleInputPassword1"
           placeholder="이메일주소 입력 후 1자만 입력해보세요"
         />
@@ -129,7 +130,15 @@
       <button type="submit" class="btn btn-primary">Submit</button>
       <a href="accout.html" class="account">회원가입</a>
     </form>
+    <div class="card">
+      <label for="userInput">닉네임 입력하세요</label>
+      <input type="text" id="userInput" />
+      <label for="contentInput">댓글 내용입력하세요</label>
+      <input type="text" id="contentInput" />
+      <button id="submitButton">출력</button>
+    </div>
+    <div id="output"></div>
 
-    <script src="javascript/script.js"></script>
+    <script src="javascript/login.js"></script>
   </body>
 </html>
