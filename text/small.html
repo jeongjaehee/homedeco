@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/default.css" />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      .carousel-control-prev-icon {
+        width: 60px;
+        height: 60px;
+      }
+      .carousel-control-next-icon {
+        width: 60px;
+        height: 60px;
+      }
+      .carousel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        height: 700px;
+        color: #000;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .carousel-item:nth-of-type(1) {
+        background: url("img/decor1.jpg") no-repeat;
+        background-size: cover;
+      }
+      .carousel-item:nth-of-type(2) {
+        background: url("img/decor2.jpg") no-repeat;
+        background-size: cover;
+      }
+      .carousel-item:nth-of-type(3) {
+        background: url("img/decor3.jpg") no-repeat;
+        background-size: cover;
+      }
+      .carousel-item span {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .pagination-group {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .pagination-group button {
+        width: 30px;
+        height: 30px;
+        background: url("img/icon/pause.svg") no-repeat center center;
+        color: transparent;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 13;
+      }
+      .pagination-group .current {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 40px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+      }
+      .pagination-group .total {
+        width: 30px;
+        height: 30px;
+
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pagination-long-swiper {
+        width: 100%;
+        height: 30px;
+
+        background-color: #fff;
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .pagination-long-swiper .swiper-pagination-progressbar-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background-color: #000;
+        transform-origin: left center;
+        transform: scaleX(0.25) scaleY(1);
+        transition: 1s ease-in-out;
+      }
+      .scroll-wrap {
+        position: absolute;
+        width: 100%;
+        bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .scroll-box {
+        width: 300px;
+        height: 100px;
+        overflow: hidden;
+      }
+
+      .scroll-content {
+        width: 600px;
+        white-space: nowrap;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+      }
+      .scroll-box {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 50px;
+        padding: 10px;
+        font-size: 13px;
+        font-weight: bold;
+        color: transparent;
+        border: none;
+      }
+      .scroll-box::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url(/assets/arrowdown.svg) no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        animation-name: jaehee;
+        animation-duration: 2s;
+        animation-duration: leaner;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+        z-index: 11;
+      }
+      .scroll-text {
+        font-size: 12px;
+        line-height: 24px;
+        color: #000;
+      }
+      /* 키프레임 이름 = 애니메이션 이름 */
+      @-webkit-keyframes jaehee {
+        0% {
+          top: 0%;
+        }
+        100% {
+          top: 60%;
+        }
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .carousel {
+        position: relative;
+        width: 100vw;
+        height: 700px;
+        overflow: hidden;
+      }
+      .carousel-inner {
+        width: 300vw;
+        height: 700px;
+        transition: transform 0.5s;
+        display: block;
+        clear: both;
+        translate: translateX(-300);
+      }
+      .carousel-item {
+        position: relative;
+        width: 100vw;
+        height: 700px;
+        float: left;
+      }
+      .carousel-text {
+        color: #fff;
+        position: absolute;
+      }
+      .carousel-text span {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .carousel-item img {
+        width: 100%;
+        background: no-repeat;
+      }
+
+      .carousel-control-next {
+        width: 100px;
+        height: 100px;
+        color: transparent;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        background: url(/assets/arrownext.svg) no-repeat center center;
+      }
+      .list-item-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 400px;
+        box-sizing: border-box;
+        background: url(/img/henry-co-6-stO-K6JaY-unsplash.jpg) no-repeat;
+      }
+      .list-item {
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        margin: 20px;
+      }
+      .list-item-text {
+        position: absolute;
+        bottom: -20px;
+      }
+      .list-item-text span {
+        background-color: #fff;
+        border: 1px solid grey;
+        color: grey;
+        border-radius: 18px;
+        font-size: 13px;
+        padding: 6px;
+      }
+      @-webkit-keyframes hover {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .list-item:hover img {
+        animation-name: hover;
+        animation-duration: 0.8s;
+        animation-duration: leaner;
+      }
+      .list-item img {
+        background-position: center bottom;
+        display: block;
+        width: 100%;
+      }
+
+      .full-banner-item {
+        width: 100%;
+        height: 300px;
+        background: url(/img/decor1.jpg) no-repeat center center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="line-banner-sec clear">
+      <div class="full-banner-item">fsdfsdf</div>
+    </section>
+    <section class="main-banner-sec clear">
+      <div class="carousel slide">
+        <div class="carousel-inner clear">
+          <div class="carousel-item">
+            <img src="img/decor1.jpg" alt="" />
+            <div class="carousel-text">
+              <p>1SB Flooring</p>
+              <span>1오리지널,헤링본,강,엠보</span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/decor2.jpg" alt="" />
+            <div class="carousel-text">
+              <p>2SB Flooring</p>
+              <span>2오리지널,헤링본,강,엠보</span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/decor3.jpg" alt="" />
+            <div class="carousel-text">
+              <p>3SB Flooring</p>
+              <span>3오리지널,헤링본,강,엠보</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-next" role="button">
+          <span class="carousel-control-next-icon">Next</span>
+        </a>
+        <div class="scroll-wrap">
+          <span class="scroll-box"></span>
+          <p class="scroll-text">Scroll Down</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="myhome-overview-sec clear">
+      <h2>우리집 시공사례</h2>
+      <div class="list-item-wrap">
+        <div class="list-item">
+          <img src="/img/decor1.jpg" alt="" />
+          <div class="list-item-text">
+            <span>#히든도어</span>
+            <span>#가구도어</span>
+            <span>#PET도어</span>
+            <span>#ABC보드</span>
+          </div>
+        </div>
+        <div class="list-item">
+          <img src="/img/decor2.jpg" alt="" />
+          <div class="list-item-text">
+            <span>#PET도어</span>
+            <span>#표면가공보드</span>
+            <span>#중문</span>
+          </div>
+        </div>
+        <div class="list-item">
+          <img src="/img/decor4.jpg" alt="" />
+          <div class="list-item-text">
+            <span>#가구도어</span>
+            <span>#PET도어</span>
+            <span>#표면가공보드</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="pagination-group">
+      <button class="main-pause">일시정지</button>
+      <span class="current">1</span>
+      <div class="pagination-long-swiper">
+        <span class="swiper-pagination-progressbar-fill" id="element"></span>
+      </div>
+      <span data-v-33e8ddb9="" class="total">04</span>
+    </div>
+    <script src="javascript/jquery-1.12.3.js"></script>
+
+    <script>
+      let longSwiper = setInterval(function () {
+        const element = document.getElementById("element");
+        let currentScale = 0;
+        for (let i = 0; i < 4; i++) {
+          let a = 0;
+          $(".main-pause").click(function () {
+            clearTimeout(timeOut);
+          });
+
+          let timeOut = setTimeout(function () {
+            currentScale += 0.25;
+            element.style.transform = `scaleX(${currentScale}) scaleY(1)`;
+            $(".current").text(i + 1);
+          }, 1000 * i);
+        }
+        $(".left a:first-child")
+          .fadeOut()
+          .next("a")
+          .fadeIn()
+          .end()
+          .appendTo(".left");
+      }, 4000);
+      let a = 0;
+      $(".main-pause").click(function () {
+        clearInterval(longSwiper);
+      });
+
+      function starSwiper() {
+        let v = 0;
+        var carouselSwiper = setInterval(function () {
+          v -= 100;
+          document.querySelector(
+            ".carousel-inner"
+          ).style.transform = `translateX(${v}vw)`;
+          if (v == -300) {
+            v = 0;
+            document.querySelector(
+              ".carousel-inner"
+            ).style.transform = `translateX(${v}vw)`;
+          }
+          document
+            .querySelector(".carousel-control-next")
+            .addEventListener("click", function () {
+              v -= 100;
+              document.querySelector(
+                ".carousel-inner"
+              ).style.transform = `translateX(${v}vw)`;
+
+              if (v == -300) {
+                v = 0;
+                document.querySelector(
+                  ".carousel-inner"
+                ).style.transform = `translateX(${v}vw)`;
+              }
+            });
+        }, 6000);
+      }
+      starSwiper();
+    </script>
+  </body>
+</html>
